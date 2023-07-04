@@ -9,12 +9,12 @@ const limit = (120 / 100) * 1000
 
 const patchDate = new Date('Jun 28 2023')
 // const euw1_platinum_1 = require("./rank_data/euw1/PLATINUM/I/PLATINUM_I.json")
-const euw1_platinum_1_puuids = require("./rank_data/euw1/PLATINUM/I/puuids.json")
-const euw1_platinum_1_games = require("./rank_data/euw1/PLATINUM/I/games.json")
+// const euw1_platinum_1_puuids = require("./rank_data/euw1/PLATINUM/I/puuids.json")
+// const euw1_platinum_1_games = require("./rank_data/euw1/PLATINUM/I/games.json")
 const Ranks = ['IRON', 'BRONZE', 'SILVER', 'GOLD', 'PLATINUM', 'DIAMOND']
 const Division = ['IV', 'III', 'II', 'I']
 
-// start()
+start()
 async function start() {
     let debug = 0
     let r = 0
@@ -136,7 +136,6 @@ async function getPuuids() {
     }, limit)
 }
 
-getMatchData()
 async function getMatchData() {
     const idCheck = JSON.parse(fs.readFileSync('./rank_data/euw1/PLATINUM/I/games.json'))
     let id = idCheck[0][0]
